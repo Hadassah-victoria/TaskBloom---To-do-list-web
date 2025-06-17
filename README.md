@@ -65,7 +65,7 @@ It features a floral pastel theme, intuitive UI, and saves your tasks using `loc
         this.updateAddButton();
     }
 
-
+---
 
 🙋‍♀️ Author:
 Developed by Hadassah Victoria
