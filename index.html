@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Floral To-Do - Organize with Nature</title>
+
+    <meta name="description"
+        content="A beautiful, calming to-do list app with a floral theme. Organize your tasks with style and tranquility.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <h1 class="title">🌸 TaskBloom 🌸</h1>
+                <p class="subtitle">Organize your day with ease and elegance </p>
+            </header>
+
+            <!-- Task Input -->
+            <section class="task-input-section">
+                <form id="taskForm" class="task-form">
+                    <div class="input-container">
+                        <input type="text" id="taskInput" placeholder="Add a new task... 🌻" class="task-input"
+                            maxlength="200">
+                        <button type="submit" class="add-btn" id="addBtn">
+                            <span class="add-icon">+</span>
+                            Add
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Task Stats -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalTasks">0</div>
+                        <div class="stat-label">Total Tasks</div>
+                        <div class="stat-emoji">📝</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="pendingTasks">0</div>
+                        <div class="stat-label">Pending</div>
+                        <div class="stat-emoji">⏳</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number stat-completed" id="completedTasks">0</div>
+                        <div class="stat-label">Completed</div>
+                        <div class="stat-emoji">✅</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number stat-progress" id="progressRate">0%</div>
+                        <div class="stat-label">Progress</div>
+                        <div class="stat-emoji">🎯</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task Filters -->
+            <section class="filters-section">
+                <div class="filters-container">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">
+                            <span>🌸</span> All Tasks
+                        </button>
+                        <button class="filter-btn" data-filter="pending">
+                            <span>🌻</span> Pending
+                        </button>
+                        <button class="filter-btn" data-filter="completed">
+                            <span>🌺</span> Completed
+                        </button>
+                    </div>
+                    <button id="clearCompletedBtn" class="clear-btn" style="display: none;">
+                        🗑️ Clear Completed
+                    </button>
+                </div>
+            </section>
+
+            <!-- Tasks List -->
+            <section class="tasks-section">
+                <div id="tasksList" class="tasks-list">
+                    <!-- Tasks will be rendered here -->
+                </div>
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-emoji">🎀</div>
+                    <p class="empty-text">No tasks yet. Add one above! ✨</p>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Made with 🩷 for a peaceful productivity experience</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h3>Edit Task</h3>
+            <input type="text" id="editInput" class="edit-input" maxlength="200">
+            <div class="modal-buttons">
+                <button id="saveEditBtn" class="save-btn">Save</button>
+                <button id="cancelEditBtn" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
